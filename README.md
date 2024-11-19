@@ -43,7 +43,6 @@ conda create -n anchorcontext python=3.10 -y && conda activate anchorcontext
 pip install torch==2.6.0.dev20241112+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
 pip install packaging &&  pip install ninja && pip install flash-attn==2.5.6 --no-build-isolation --no-cache-dir
 pip install yunchang==0.2   # directly ```pip install yunchang``` if you are using flash_attn >= 2.6.0
-git clone https://github.com/haonan3/AnchorContext.git
 cd AnchorContext
 pip install -r requirements.txt
 python anchor_context/library_modified_files/softlink_to_library.py

@@ -62,7 +62,7 @@ logger = logging.get_logger(__name__)
 
 _CONFIG_FOR_DOC = "LlamaConfig"
 
-### Haonan
+###
 from torch.nn.attention.flex_attention import flex_attention
 flex_attention = torch.compile(flex_attention)
 ####
@@ -1194,7 +1194,7 @@ class LlamaModel(LlamaPreTrainedModel):
             [LlamaDecoderLayer(config, layer_idx) for layer_idx in range(config.num_hidden_layers)]
         )
         self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
-        self.rotary_emb = LlamaRotaryEmbedding(config=config) # Haonan: Note, this one is not used currently, but in the future, we can use it to compute & cache the rotary embeddings
+        self.rotary_emb = LlamaRotaryEmbedding(config=config) # Note, this one is not used currently, but in the future, we can use it to compute & cache the rotary embeddings
         self.gradient_checkpointing = False
 
         # Initialize weights and apply final processing
@@ -1261,7 +1261,7 @@ class LlamaModel(LlamaPreTrainedModel):
         # embed positions
         hidden_states = inputs_embeds
 
-        ## Haonan ##
+        ##
         # check if position_ids is a tuple
         global_position_ids = None
         global_doc_ids = None

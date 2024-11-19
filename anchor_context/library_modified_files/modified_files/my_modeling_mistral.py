@@ -57,7 +57,7 @@ logger = logging.get_logger(__name__)
 
 _CONFIG_FOR_DOC = "MistralConfig"
 
-### Haonan
+###
 from torch.nn.attention.flex_attention import flex_attention
 flex_attention = torch.compile(flex_attention)
 ####
@@ -917,7 +917,7 @@ class MistralModel(MistralPreTrainedModel):
 
         hidden_states = inputs_embeds
 
-        ## Haonan ##
+        ##
         # check if position_ids is a tuple
         global_position_ids = None
         global_doc_ids = None
