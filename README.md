@@ -12,6 +12,9 @@
 This repository provides the implementation of **`AnchorAttention`**, a plug-and-play attention mechanism designed to significantly improve the long-context training of Large Language Models (LLMs). AnchorAttention addresses numerical issues that arise when using Rotary Positional Embedding (RoPE) with BFloat16 precision, particularly in long-context scenarios.
 
 
+
+
+
 ### Key Features:
 
 - **Improved Long-Context Performance**: Improves model's long-context performance on RULER and LongBench.
